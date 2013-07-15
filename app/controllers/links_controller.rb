@@ -1,5 +1,6 @@
 class LinksController < ApplicationController
   def index
+    @links = Link.order('Name ASC')
   end
   def new
   	@link = Link.new
