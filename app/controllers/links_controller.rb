@@ -1,6 +1,6 @@
 class LinksController < ApplicationController
   def index
-    @links = Link.order('Name ASC')
+    @links = Link.order('created_at DESC')
   end
   def new
   	@link = Link.new
