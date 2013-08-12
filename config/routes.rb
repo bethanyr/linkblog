@@ -1,6 +1,9 @@
 Linkblog::Application.routes.draw do
+
+  scope "/:locale" do
+    resources :links
+  end
   root :to => "links#index"
-  resources :links
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
